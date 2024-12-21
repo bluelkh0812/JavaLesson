@@ -1,3 +1,5 @@
+package ctrl;
+
 import java.util.Scanner;
 
 public class Gugudan {
@@ -16,6 +18,7 @@ public class Gugudan {
                 i += 1;
             }
 
+            System.out.println();
             dan += 1;
         }
 
