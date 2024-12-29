@@ -17,14 +17,39 @@ public class Person {
         age = a;
         name = n;
         height = h;
-
-        System.out.println("Person 클래스로부터 객체가 생성됨");
+      //  System.out.println("Person 클래스로부터 객체가 생성됨");
     }
 
     // 행위(Method, Member function)
     public void introduce() {
         System.out.println("안녕하세요, 저는 " + name + "이고,");
         System.out.println("나이는 " + age + "살 입니다");
+    }
 
+    // getAge : 나이를 반환하는 메소드
+    // setAge : 나이를 설정(저장)하는 메소드, 음수는 설정할 수 없도록 제한.
+    public int getAge(){
+        return age;
+    }
+    public void setAge(int a){
+        if ( a < 0)
+            return;
+        age = a;
+    }
+    public String getName(){
+        return name;
+    }
+    public void setName(String n){
+        if (!name.isEmpty()){
+           name = n;
+        }
+    }
+    public float getHeight(){
+        return height;
+    }
+    public void setHeight(float h){
+        if (h < 0)
+            return;
+        height = h;
     }
 }

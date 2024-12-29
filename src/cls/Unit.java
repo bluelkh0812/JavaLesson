@@ -58,9 +58,14 @@ public class Unit {
             this.name = name;
         }
     }
+    public void damage(int power){
+        hp -= power;
+        System.out.printf("%s의 HP : %d \n", name, hp);
+    }
 
     public void attack(Unit target){
-        target.hp -= this.power;
+        target.damage(power);
+        System.out.printf("%s가 %s를 공격함\n", name, target.getname());
     }
 
 }
@@ -82,3 +87,5 @@ public class Unit {
 *  출력 형식)
 * 현재 잔액은 xxx원 입니다.
 *  */
+
+// Marine
