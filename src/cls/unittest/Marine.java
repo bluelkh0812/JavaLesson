@@ -1,6 +1,6 @@
-package cls;
+package cls.unittest;
 
-public class Marine extends Unit{
+public class Marine extends Unit {
     // steampack : 논리형(boolean), 접근금지
     private boolean Steampack;
 
@@ -10,6 +10,10 @@ public class Marine extends Unit{
         setPower(10);
         Steampack = false;
     }
+
+    private void setname(String name) {
+    }
+
     public void setSteampack(boolean steampack){
         this.Steampack = steampack;
     }
@@ -21,7 +25,9 @@ public class Marine extends Unit{
         else
             setPower( 10 );
 
-        super.attack(target);   // 부모 클래스의 attack을 호출
+    }
+    public void damage(int power){
+
     }
 
 }
