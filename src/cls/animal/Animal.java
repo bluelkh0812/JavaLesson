@@ -24,6 +24,6 @@ public abstract class Animal {
     public void Crying() {
         System.out.printf("%s는 %s\n", name, sound );
     }
-
+    // 추상 메소드
     public abstract void crying();
 }

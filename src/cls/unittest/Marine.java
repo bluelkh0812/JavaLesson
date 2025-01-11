@@ -20,7 +20,7 @@ public class Marine extends Unit {
 
     public void attack(Unit target){
         if ( Steampack )
-            setPower( getpower()*2);
+            setPower( getPower()*2);
         // steampack이 false이면 원래 power로 설정하기
         else
             setPower( 10 );

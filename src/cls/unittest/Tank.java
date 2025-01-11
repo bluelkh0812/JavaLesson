@@ -5,7 +5,7 @@ public class Tank extends Unit {
     public boolean seize;
 
     public Tank(String name) {
-        setname(name);
+        setName(name);
         setHp(500);
         setPower(50);
         seize = false;
@@ -15,9 +15,14 @@ public class Tank extends Unit {
         this.seize = setseize;
     }
 
+    @Override
+    public void damage(int power) {
+
+    }
+
     public void attack(Unit target) {
         if (seize)
-            setPower(getpower() * 3);
+            setPower(getPower() * 3);
         else setPower(50);
     }
 

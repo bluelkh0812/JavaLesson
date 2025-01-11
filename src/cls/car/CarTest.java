@@ -11,6 +11,22 @@ public class CarTest {
         CarLoader loader = new CarLoader();
         loader.load(car1);
         loader.load(truck1);
+        loader.load(new Car() {
+            @Override
+            public void go() {
+
+            }
+
+            @Override
+            public void stop() {
+
+            }
+
+            @Override
+            public void turn(boolean left) {
+
+            }
+        });
 
     }
 }
