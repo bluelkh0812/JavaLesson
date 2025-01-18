@@ -52,6 +52,12 @@ public class Person {
             return;
         height = h;
     }
+
+    @Override
+    public String toString() {
+        return getName();
+    }
+
     // static 내부클래스 Builder 정의
     public static class Builder {
         // 데이터
