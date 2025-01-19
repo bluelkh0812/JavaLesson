@@ -58,6 +58,32 @@ public class Person {
         return getName();
     }
 
+
+    @Override
+    public boolean equals(Object obj) {
+        boolean isPerson = obj instanceof Person;
+        if (!isPerson) {
+            return false;
+
+            // Person 클래스의 인스턴스이면...
+            Person p = (Person) obj; // 비교대상
+            // 비교대상 객체와 이름, 키, 나이가 같으면 같은 객체로 인정한다
+            if (p.getName().equals(name) &&
+                    p.getHeight() == height &&
+                    p.getAge() == age)
+                return true;
+
+            return false;
+
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        int code = name.length() + (int)height + age;
+        return code;
+    }
+
     // static 내부클래스 Builder 정의
     public static class Builder {
         // 데이터
